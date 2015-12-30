@@ -4,7 +4,11 @@
   "description": "herokuapp",
   "main": "app.js",
   "dependencies": {
-    "express":"*"
+    "express":"*",
+    "morgan":"*",
+    "mongoose":"*",
+    "ejs":"*",
+    "body-parser":"*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

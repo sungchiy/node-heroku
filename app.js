@@ -5,7 +5,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     app = express();
 
-mongoose.connect('mongodb://localhost/sungchiy');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/sungchiy');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));

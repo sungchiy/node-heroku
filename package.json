@@ -1,0 +1,14 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "herokuapp",
+  "main": "app.js",
+  "dependencies": {
+    "express":"*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charlie Sung",
+  "license": "ISC"
+}

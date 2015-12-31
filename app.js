@@ -5,6 +5,9 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     app = express();
 
+require('./models/todo');
+var todoController = require('./controllers/todo');
+
 mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/sungchiy');
 
 app.use(bodyParser.json());
@@ -15,6 +18,8 @@ app.set('view engine','ejs');
 app.get('/', function(req,res,next){
     res.send("my awesome mongoose app");
 });
+
+app.get('/todo', todoController.index);
 
 app.listen(port, function(err){
     console.log("server listening on %s", port);
